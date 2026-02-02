@@ -2,11 +2,71 @@ GET http://localhost:3000/api/v1/
 
 ###
 
-POST http://localhost:3000/api/v1/prodect 
+GET http://localhost:3000/api/v1/69804ff6e00d8c8f4fd39b36
+
+###
+
+GET  http://localhost:3000/api/v1/getCount
+
+###
+GET  http://localhost:3000/api/v1/isfeatcher/2
+
+###
+PUT http://localhost:3000/api/v1/prodect
 Content-Type: application/json
 
 {
     "name":"NOOR",
     "image": "5100",
-    "countInStock": "30"
+    "description":"nooooor",
+    "richDescription":"nooooor",
+    "countIstock": 30,
+    "category":"6980475d9db6c94216a7ae7e",
+}
+
+###
+
+POST http://localhost:3000/api/v1/prodect
+Content-Type: application/json
+
+{
+    "name":"Khalied",
+    "image": "5100",
+    "description":"nooooor",
+    "richDescription":"nooooor",
+    "countIstock": 30,
+    "category":"6980475d9db6c94216a7ae7e",
+    "isFeatured":true
+}
+###
+
+GET  http://localhost:3000/api/v1/categories
+
+###
+
+GET  http://localhost:3000/api/v1/categories/6980475d9db6c94216a7ae7e
+
+###
+
+POST http://localhost:3000/api/v1/categories 
+Content-Type: application/json
+
+{
+    "name":"NOOOOR",
+    "color":"#000",
+    "icon":"icone-health"
+}
+
+###
+
+DELETE http://localhost:3000/api/v1/categories/69805b4e4dc39c3ace3f795c
+
+###
+PUT http://localhost:3000/api/v1/categories/69805b4e4dc39c3ace3f795c
+Content-Type: application/json
+
+{
+    "name":"Mohammed Kamal",
+    "color":"#000",
+    "icon":"icone-health"
 }
