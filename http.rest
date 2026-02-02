@@ -1,0 +1,12 @@
+GET http://localhost:3000/api/v1/
+
+###
+
+POST http://localhost:3000/api/v1/prodect 
+Content-Type: application/json
+
+{
+    "name":"NOOR",
+    "image": "5100",
+    "countInStock": "30"
+}
