@@ -1,4 +1,6 @@
 GET http://localhost:3000/api/v1/
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODMwNDdhNDU2MTQ1NzJjYmRkMTBjMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NzAxOTQwOTQsImV4cCI6MTc3MDI4MDQ5NH0.9oZ1x_nnkoJVqNMKRRbDh6ATkbPQ19Hhf9kNwk_EKhw
 
 ###
 
@@ -7,6 +9,8 @@ GET http://localhost:3000/api/v1/69804ff6e00d8c8f4fd39b36
 ###
 
 GET  http://localhost:3000/api/v1/getCount
+Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODMwNWMwNzM2MzE1ZTZkNjhhZTc2OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDE5NDM4NSwiZXhwIjoxNzcwMjgwNzg1fQ.dBh49c26prk9496jzKlkoEhs1-ndXqCb3Oet4YrhsnU
 
 ###
 GET  http://localhost:3000/api/v1/isfeatcher/2
@@ -14,6 +18,7 @@ GET  http://localhost:3000/api/v1/isfeatcher/2
 ###
 PUT http://localhost:3000/api/v1/prodect
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODMwNWMwNzM2MzE1ZTZkNjhhZTc2OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDE5NDM4NSwiZXhwIjoxNzcwMjgwNzg1fQ.dBh49c26prk9496jzKlkoEhs1-ndXqCb3Oet4YrhsnU
 
 {
     "name":"NOOR",
@@ -27,16 +32,19 @@ Content-Type: application/json
 ###
 
 POST http://localhost:3000/api/v1/prodect
-Content-Type: application/json
+Content-Type: multipart/form-data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODMwNWMwNzM2MzE1ZTZkNjhhZTc2OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDE5NDQ1NiwiZXhwIjoxNzcwMjgwODU2fQ.PB4uL_9ANLGT1Bkeb86PeYT9MGl5MOPOmA2k2T_sGbA
+
 
 {
-    "name":"Khalied",
-    "image": "5100",
+    "name":"Bike",
+    "image": "D:\projects\BACK_END\e-commers-api/Screenshot 2026-01-07 203707.png",
     "description":"nooooor",
     "richDescription":"nooooor",
     "countIstock": 30,
     "category":"6980475d9db6c94216a7ae7e",
-    "isFeatured":true
+    "isFeatured":true,
+    "price":"500"
 }
 ###
 
@@ -52,7 +60,7 @@ POST http://localhost:3000/api/v1/categories
 Content-Type: application/json
 
 {
-    "name":"NOOOOR",
+    "name":"Aisha",
     "color":"#000",
     "icon":"icone-health"
 }
@@ -64,9 +72,96 @@ DELETE http://localhost:3000/api/v1/categories/69805b4e4dc39c3ace3f795c
 ###
 PUT http://localhost:3000/api/v1/categories/69805b4e4dc39c3ace3f795c
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODMwNWMwNzM2MzE1ZTZkNjhhZTc2OCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDE5NDQ1NiwiZXhwIjoxNzcwMjgwODU2fQ.PB4uL_9ANLGT1Bkeb86PeYT9MGl5MOPOmA2k2T_sGbA
 
 {
-    "name":"Mohammed Kamal",
+    "name":"Mohammed Kamal ss",
     "color":"#000",
     "icon":"icone-health"
 }
+
+
+
+###
+User 
+###
+
+GET  http://localhost:3000/api/v1/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODMwODA0MTJkMTI2MjQ0Yzk3ZWY4YyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NzAxOTQ5NzAsImV4cCI6MTc3MDI4MTM3MH0.NtIr8zyLUpegOa9ws3u-vKpf0svNacVXNBvSEGK9YYQ
+
+###
+
+POST  http://localhost:3000/api/v1/user
+Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODMwODA0MTJkMTI2MjQ0Yzk3ZWY4YyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NzAxOTQ5NzAsImV4cCI6MTc3MDI4MTM3MH0.NtIr8zyLUpegOa9ws3u-vKpf0svNacVXNBvSEGK9YYQ
+
+
+{
+    "name": "Ali alsadeg noor sf",
+    "passwordHash": "12345",
+    "email": "zon123as1sa@gmail.com",
+    "isAdmin" : "true"
+}
+###
+POST  http://localhost:3000/api/v1/user/login
+Content-Type: application/json
+
+{
+    "name": "Ali alsadeg noor sf",
+    "password": "12345",
+    "email": "zon123as1sa@gmail.com"
+}
+
+###
+POST  http://localhost:3000/api/v1/order
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQzYTlmNzZhMzA1NGViN2I0MTZkZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDI3MzQ2MiwiZXhwIjoxNzcwMzU5ODYyfQ.b8VMPg8RTnyPdn2HtwCajb4vJ2IDAFOqCmEP2IQRRLQ
+
+
+{
+    "orderItems":[
+    {"quantity":"2","product":"6984354089cea6111fcfe355" },
+    {"quantity":"20","product":"698440d4395027e4f273e6f8"}
+    ],
+    "shippingaddres1": "Ali Street 1",
+    "totalPrice": "200",
+    "city": "SUDAN",
+    "user":"69843a9f76a3054eb7b416dd"
+}
+
+###
+GET  http://localhost:3000/api/v1/order
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQzYTlmNzZhMzA1NGViN2I0MTZkZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDI3MzQ2MiwiZXhwIjoxNzcwMzU5ODYyfQ.b8VMPg8RTnyPdn2HtwCajb4vJ2IDAFOqCmEP2IQRRLQ
+
+###
+
+GET  http://localhost:3000/api/v1/order/69843b604fd3f615a928ede1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQzYTlmNzZhMzA1NGViN2I0MTZkZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDI3MzQ2MiwiZXhwIjoxNzcwMzU5ODYyfQ.b8VMPg8RTnyPdn2HtwCajb4vJ2IDAFOqCmEP2IQRRLQ
+
+###
+
+
+PUT  http://localhost:3000/api/v1/order/6984412d395027e4f273e6ff
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQzYTlmNzZhMzA1NGViN2I0MTZkZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDI3MzQ2MiwiZXhwIjoxNzcwMzU5ODYyfQ.b8VMPg8RTnyPdn2HtwCajb4vJ2IDAFOqCmEP2IQRRLQ
+
+{
+    "status":"Delvered"
+}
+###
+
+GET   http://localhost:3000/api/v1/order/get/totalsalce
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQzYTlmNzZhMzA1NGViN2I0MTZkZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDI3MzQ2MiwiZXhwIjoxNzcwMzU5ODYyfQ.b8VMPg8RTnyPdn2HtwCajb4vJ2IDAFOqCmEP2IQRRLQ
+
+###
+
+GET   http://localhost:3000/api/v1/order/get/count
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQzYTlmNzZhMzA1NGViN2I0MTZkZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc3MDI3MzQ2MiwiZXhwIjoxNzcwMzU5ODYyfQ.b8VMPg8RTnyPdn2HtwCajb4vJ2IDAFOqCmEP2IQRRLQ
+
+###
+
